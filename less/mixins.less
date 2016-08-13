@@ -1,0 +1,25 @@
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.container-fluid() {
+  width: auto;
+  min-width: 280px;
+  margin: 0 auto;
+
+    @media @tablet-widths {
+    padding: 0;
+    width: 84%;
+    max-width: 939px;
+    margin: 0 auto;
+  }
+}
+
+.padding-mobile(@padding: 20px) {
+  padding-left: @padding;
+  padding-right: @padding;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "healthy-meal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Сайт для компании «Здоровое питание»",
+  "author": "Александра Годун",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/misterblblbl/Healthy-Meal.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "6.3.3",
+    "browser-sync": "2.11.1",
+    "editorconfig-tools": "0.1.1",
+    "gulp": "3.9.1",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.1.0",
+    "gulp-less": "3.1.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "editorconfig-tools check *",
+    "build": "gulp style",
+    "start": "gulp serve"
+  },
+  "engines": {
+    "node": "^5.0.0"
+  }
+}

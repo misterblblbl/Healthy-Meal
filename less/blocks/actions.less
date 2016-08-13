@@ -1,0 +1,85 @@
+.actions__steps {
+  margin-top: 50px;
+}
+
+.actions__input {
+  display: none;
+}
+
+.actions__controls {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.actions__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: justify;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    &::before {
+      color: white;
+    }
+  }
+}
+
+.actions__label::before {
+  position: absolute;
+  content: attr(data-number);
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-size: 24px;
+  color: white;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#actions-toggle-1:checked ~ .actions__controls label[for="actions-toggle-1"],
+#actions-toggle-2:checked ~ .actions__controls label[for="actions-toggle-2"],
+#actions-toggle-3:checked ~ .actions__controls label[for="actions-toggle-3"] {
+  background-color: #FFFFFF;
+  &::before {
+    color: @h-red;
+  }
+}
+
+.actions__inner {
+  overflow: hidden;
+  width: auto;
+}
+
+.actions__items {
+  width: 300%;
+  transition: transform .8s ease;
+}
+
+.actions__item {
+  float: left;
+  width: 280px;
+  min-height: 300px;
+  padding-top: 48px;
+  padding-bottom: 45px;
+  text-align: center;
+}
+
+#actions-toggle-1:checked ~ .actions__inner .actions__items {
+  transform: translate(0);
+}
+
+#actions-toggle-2:checked ~ .actions__inner .actions__items {
+  transform: translate(-280px);
+}
+
+#actions-toggle-3:checked ~ .actions__inner .actions__items {
+  transform: translate(-560px);
+}
