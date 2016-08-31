@@ -2,6 +2,10 @@
   margin-top: 50px;
 }
 
+.actions__wrapper {
+  .container-fluid();
+}
+
 .actions__input {
   display: none;
 }
@@ -65,11 +69,14 @@
 
 .actions__item {
   float: left;
+  box-sizing: border-box;
   width: 280px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 40px;
   min-height: 300px;
-  padding-top: 48px;
-  padding-bottom: 45px;
-  text-align: center;
+  padding: 48px 20px 45px;
+  margin-right: 30px;
+  text-align: left;
 }
 
 #actions-toggle-1:checked ~ .actions__inner .actions__items {
@@ -81,5 +88,5 @@
 }
 
 #actions-toggle-3:checked ~ .actions__inner .actions__items {
-  transform: translate(-560px);
+  transform: translate(-590px);
 }

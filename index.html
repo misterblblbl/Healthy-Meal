@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Здоровое питание</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-3.1.0.min.js"></script>
 </head>
 <body>
     <header class="page-header">
@@ -15,7 +16,7 @@
                 <img src="img/hm-logo.svg" alt="Здоровое питание" width="185" height="53">
             </div>
 
-            <nav class="main-nav">
+            <nav class="main-nav" id="menu">
                 <span class="main-nav__toggle main-nav__toggle--closed">Открыть меню</span>
 
 
@@ -236,6 +237,7 @@
                 </p>
             </div>
 
+            <div class="actions__wrapper">
             <div class="actions__steps">
                 <input class="actions__input" type="radio" id="actions-toggle-1" name="actions-toggle" checked>
                 <input class="actions__input" type="radio" id="actions-toggle-2" name="actions-toggle">
@@ -251,7 +253,7 @@
                     <div class="actions__items">
                         <div class="actions__item">
                             <div class="actions__picture">
-                                <img src="" alt="Корова">
+                                <img src="img/cow.svg" alt="Корова">
                             </div>
 
                             <p class="actions__description">
@@ -263,7 +265,7 @@
 
                         <div class="actions__item">
                             <div class="actions__picture">
-                                <img src="" alt="Компьютер">
+                                <img src="img/computer.svg" alt="Компьютер">
                             </div>
 
                             <p class="actions__description">
@@ -277,7 +279,7 @@
 
                         <div class="actions__item">
                             <div class="actions__picture">
-                                <img src="" alt="Подарки">
+                                <img src="img/presents.svg" alt="Подарки">
                             </div>
 
                             <p class="actions__description">
@@ -291,17 +293,19 @@
 
                 </div>
             </div>
+            </div>
         </section>
 
         <section class="page-section page-section--water-straw" id="water-straw">
             <div class="page-section__wrapper">
 
                 <div class="page-section__content">
+                    <h1 class="page-section__header">Соломинка для воды «Vita Sip»</h1>
+
                     <div class="page-section__picture">
-                        <img src="" alt="Vita Sip">
+                        <img src="img/vitasip.png" alt="Vita Sip">
                     </div>
 
-                    <h1 class="page-section__header">Соломинка для воды «Vita Sip»</h1>
                     <div class="page-section__description">
                         <p class="page-section__text">
                             «Волшебная соломинка» - инновационный продукт, который производится
@@ -336,13 +340,13 @@
                 <h1 class="page-section__header">О компании</h1>
 
                 <div class="page-section__colunm page-section__colunm--left">
-                    <p class="page-section__company-info">
+                    <p class="page-section__company-info page-section__company-info--sale">
                         Компания «Здоровое питание» работает на рынке уже более 5 лете. Все это время компания
                         занимается поставкой соломинки для молока с разными вкусами. Сегодня наша продукция
                         представлена более чем в 50 городах страны.
                     </p>
 
-                    <p class="page-section__company-info">
+                    <p class="page-section__company-info page-section__company-info--eco">
                         «Здоровое питание» уже более 7 лет развивает рынок потребления молока, благодаря
                         своему революционному продукту. Многие магазины, при появлении в их ассортименте
                         «Волшебной соломинки», фиксируют рост продажи молока более чем на 25%.
@@ -350,12 +354,12 @@
                 </div>
 
                 <div class="page-section__colunm page-section__colunm--right">
-                    <p class="page-section__company-info">
+                    <p class="page-section__company-info page-section__company-info--grow">
                         Миссия компании «Здоровое питание» - принести на российский рынок современные
                         и качественные продукты. Мы считаем, что россияне должны питаться вкусной и здоровой пищей.
                     </p>
 
-                    <p class="page-section__company-info">
+                    <p class="page-section__company-info page-section__company-info--phone">
                         Качественное исполнение и натуральные ингредиенты подтверждены хорошими отзывами
                         потребителей. Мы очень любим наш продукт и считаем, что он обязательно должен
                         присутствовать на молочной витрине каждого продуктового магазина и в отделе
@@ -368,22 +372,22 @@
 
     <footer class="page-footer">
         <div class="page-footer__additional">
-            <a href="">Дистрибьюторам</a>
-            <a href="">Нащи документы</a>
-            <a href="#callme">Позвоните мне</a>
+            <a class="page-footer__links" href="">Дистрибьюторам</a>
+            <a  class="page-footer__links" href="">Нащи документы</a>
+            <a class="page-footer__links" href="#callme">Позвоните мне</a>
         </div>
 
         <div class="page-footer__contacts">
-            <a class="header-contacts__phone" href="tel:+74957833680">+7 (495) 783-36-80</a>
-            <a class="header-contacts__email" href="mailto:info@healthymeal.ru">info@healthymeal.ru</a>
+            <a class="page-footer__phone" href="tel:+74957833680">+7 (495) 783-36-80</a>
+            <a class="page-footer__email" href="mailto:info@healthymeal.ru">info@healthymeal.ru</a>
         </div>
 
         <div class="page-footer__logo">
-            <img src="img/hm-logo.svg" alt="Здоровое питание">
+            <img src="img/hm-logo.svg" alt="Здоровое питание" width="300" height=60">
         </div>
     </footer>
 
-    <section class="modal">
+    <section class="modal visually-hidden">
         <button class="modal__icon-close"></button>
 
         <form class="feedback-form" action="/echo" method="post">
@@ -411,5 +415,6 @@
         </form>
     </section>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
