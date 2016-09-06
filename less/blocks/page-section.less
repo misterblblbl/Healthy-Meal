@@ -8,8 +8,8 @@
   &--tastes {
     position: relative;
 
-    padding-top: 50px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 50px;
   }
 
   &--actions {
@@ -24,9 +24,11 @@
     .padding-mobile();
 
     padding-top: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
 
     text-align: center;
+    background: @dark-blue;
+    color: #FFFFFF;
   }
 }
 
@@ -35,7 +37,17 @@
 }
 
 .page-section__picture {
-  margin-bottom: -5px;
+  padding: 0 20px;
+  margin-bottom: -4px;
+
+  &--ms {
+    background-image: url(../../img/gradient.png);
+    background-repeat: no-repeat;
+  }
+
+  &--water-straw {
+    margin-bottom: 30px;
+  }
 }
 
 .page-section__picture img {
@@ -51,18 +63,26 @@
   line-height: 42px;
   text-align: center;
   color: @h-red;
+
+  &--features {
+    margin-bottom: 30px;
+  }
+
+  &--water-straw {
+    margin-bottom: 30px;
+  }
 }
 
 .page-section__content {
   .padding-mobile();
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 40px;
+  padding-bottom: 35px;
 
   background-color: white;
 
   font-family: "Roboto Regular", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 20px;
   text-align: justify;
   color: black;
 }
@@ -77,23 +97,30 @@
   }
 }
 
+.page-section__description {
+  &--features {
+    margin-bottom: 40px;
+  }
+}
+
 .page-section__company-info {
   position: relative;
   text-align: left;
-  padding-top: 140px;
+  padding-top: 110px;
 }
 
 .page-section__company-info::before {
   position: absolute;
   content: '';
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 
-  top: 30px;
+  top: 35px;
   left: 50%;
   transform: translateX(-50%);
 
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .page-section__company-info {

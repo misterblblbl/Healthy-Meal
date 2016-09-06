@@ -22,8 +22,8 @@
   display: inline-block;
   vertical-align: middle;
   text-align: justify;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   cursor: pointer;
@@ -43,7 +43,7 @@
   font-family: "Roboto Bold", "Arial", sans-serif;
   font-size: 24px;
   color: white;
-  top: 30%;
+  top: 35%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -52,18 +52,29 @@
 #actions-toggle-2:checked ~ .actions__controls label[for="actions-toggle-2"],
 #actions-toggle-3:checked ~ .actions__controls label[for="actions-toggle-3"] {
   background-color: #FFFFFF;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.2);
   &::before {
     color: @h-red;
   }
 }
 
 .actions__inner {
+  position: relative;
   overflow: hidden;
   width: auto;
 }
 
+.actions__inner::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20px;
+}
+
 .actions__items {
-  width: 300%;
+  width: 900px;
   transition: transform .8s ease;
 }
 
@@ -75,8 +86,11 @@
   border-radius: 40px;
   min-height: 300px;
   padding: 48px 20px 45px;
-  margin-right: 30px;
+  margin-right: 20px;
+
   text-align: left;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 #actions-toggle-1:checked ~ .actions__inner .actions__items {
@@ -84,9 +98,9 @@
 }
 
 #actions-toggle-2:checked ~ .actions__inner .actions__items {
-  transform: translate(-280px);
+  transform: translate(-300px);
 }
 
 #actions-toggle-3:checked ~ .actions__inner .actions__items {
-  transform: translate(-590px);
+  transform: translate(-600px);
 }
