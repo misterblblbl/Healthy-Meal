@@ -1,0 +1,81 @@
+.product {
+  width: auto;
+  margin-top: 40px;
+  z-index: 1;
+
+  @media @tablet-widths {
+    background-color: #FFFFFF;
+  }
+}
+
+.product__wrapper {
+  .container-fluid();
+  position: relative;
+}
+
+.product__picture {
+  padding: 0 20px;
+
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+
+  background-image: url(../../img/gradient.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  @media @tablet-widths {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    width: 300px;
+    height: 399px;
+    z-index: 2;
+
+    background-position: top center;
+  }
+  
+  @media @desktop-widths {
+    width: 417px;
+    height: 554px;
+    bottom: -23px;
+  }
+}
+
+.product__picture img {
+  max-width: 400px;
+}
+
+.product__content {
+  .padding-mobile();
+  padding-top: 40px;
+  padding-bottom: 35px;
+
+  background-color: white;
+
+  @media @tablet-widths {
+    padding-left: 0;
+    padding-right: 340px;
+  }
+
+  @media @desktop-widths {
+    padding-right: 440px;
+  }
+}
+
+.product__text {
+
+  @media @tablet-widths {
+    text-align: left;
+  }
+
+  &--desktop {
+    display: none;
+
+    @media @desktop-widths {
+      display: block;
+    }
+  }
+}
+

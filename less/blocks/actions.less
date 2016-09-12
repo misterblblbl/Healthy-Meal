@@ -1,5 +1,57 @@
+.actions {
+
+  .padding-mobile();
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  text-align: justify;
+
+  @media @tablet-widths {
+    margin-top: 50px;
+  }
+}
+
+.actions__introduction {
+  @media @tablet-widths {
+    position: relative;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px 34px 40px;
+  }
+}
+
+.actions__text {
+  @media @tablet-widths {
+    padding-right: 250px;
+  }
+
+  @media @desktop-widths {
+    padding-right: 350px;
+  }
+}
+
+.actions__pic {
+  display: none;
+  @media @tablet-widths {
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    width: 242px;
+    height: 276px;
+  }
+
+  @media @desktop-widths {
+    width: 342px;
+    height: 390px;
+  }
+}
+
 .actions__steps {
   margin-top: 50px;
+  @media @tablet-widths {
+    margin-top: 0;
+  }
 }
 
 .actions__wrapper {
@@ -35,6 +87,10 @@
       color: white;
     }
   }
+
+  @media @tablet-widths {
+    display: none;
+  }
 }
 
 .actions__label::before {
@@ -46,6 +102,10 @@
   top: 35%;
   left: 50%;
   transform: translateX(-50%);
+
+  @media @tablet-widths {
+    display: none;
+  }
 }
 
 #actions-toggle-1:checked ~ .actions__controls label[for="actions-toggle-1"],
@@ -76,6 +136,10 @@
 .actions__items {
   width: 900px;
   transition: transform .8s ease;
+
+  @media @tablet-widths {
+    width: auto;
+  }
 }
 
 .actions__item {
@@ -91,6 +155,36 @@
   text-align: left;
   font-size: 14px;
   line-height: 20px;
+
+  @media @tablet-widths {
+    width: 32%;
+    margin-right: 2%;
+    position: relative;
+  }
+}
+
+.actions__item:last-child {
+  margin-right: 0;
+}
+
+.actions__item::before {
+  @media @tablet-widths {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    content: attr(data-number);
+    width: 55px;
+    height: 55px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+
+    font-family: "Roboto Bold", "Arial", sans-serif;
+    font-size: 24px;
+    line-height: 55px;
+    text-align: center;
+    color: @h-red;
+  }
 }
 
 #actions-toggle-1:checked ~ .actions__inner .actions__items {

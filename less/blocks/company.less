@@ -1,0 +1,106 @@
+.company {
+  .padding-mobile();
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  text-align: center;
+  background: @dark-blue;
+
+
+  @media @tablet-widths {
+    padding: 0;
+    background: #FFFFFF;
+    color: #FFFFFF;
+    padding-bottom: 80px;
+    padding-top: 40px;
+  }
+}
+
+.company__wrapper {
+  .container-fluid();
+}
+
+.company__header {
+  margin-bottom: 30px;
+}
+
+.company__content {
+  @media @tablet-widths {
+    .clearfix();
+    padding: 50px 30px;
+
+    background: @dark-blue;
+    border-radius: 40px;
+    color: #FFFFFF;
+
+    @media @tablet-widths {
+      padding-bottom: 0;
+      padding-top: 30px;
+    }
+  }
+}
+
+.company__colunm {
+  width: 50%;
+  &--left {
+    float: left;
+  }
+  &--right {
+    float: right;
+  }
+}
+
+.company__info {
+  position: relative;
+  padding-top: 110px;
+
+  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: justify;
+  color: white;
+
+  @media @tablet-widths {
+    padding-top: 0;
+    padding-left: 60px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+  }
+}
+
+.company__info::before {
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 60px;
+
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media @tablet-widths {
+    width: 50px;
+    height: 50px;
+    left: 20px;
+    top: 0;
+  }
+}
+
+.company__info {
+  &--sale::before {
+    background-image: url(../../img/icon-sales.png);
+  }
+  &--eco::before {
+    background-image: url(../../img/icon-eco.png);
+  }
+  &--grow::before {
+    background-image: url(../../img/icon-grow.png);
+  }
+  &--phone::before {
+    background-image: url(../../img/icon-phone.png);
+  }
+}

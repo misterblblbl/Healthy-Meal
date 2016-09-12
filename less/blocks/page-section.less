@@ -1,61 +1,4 @@
-.page-section {
-  width: auto;
-
-  &--product {
-    margin-top: 40px;
-  }
-
-  &--tastes {
-    position: relative;
-
-    padding-top: 40px;
-    padding-bottom: 50px;
-  }
-
-  &--actions {
-    .padding-mobile();
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    text-align: justify;
-  }
-
-  &--company {
-    .padding-mobile();
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    text-align: center;
-    background: @dark-blue;
-    color: #FFFFFF;
-  }
-}
-
-.page-section__wrapper {
-  .container-fluid();
-}
-
-.page-section__picture {
-  padding: 0 20px;
-  margin-bottom: -4px;
-
-  &--ms {
-    background-image: url(../../img/gradient.png);
-    background-repeat: no-repeat;
-  }
-
-  &--water-straw {
-    margin-bottom: 30px;
-  }
-}
-
-.page-section__picture img {
-  width: 100%;
-  height: auto;
-}
-
-.page-section__header {
+.section__header {
   margin: 0;
   padding: 0;
   font-family: "Roboto Bold", "Arial", sans-serif;
@@ -64,8 +7,8 @@
   text-align: center;
   color: @h-red;
 
-  &--features {
-    margin-bottom: 30px;
+  @media @tablet-widths {
+    text-align: left;
   }
 
   &--water-straw {
@@ -73,21 +16,13 @@
   }
 }
 
-.page-section__content {
-  .padding-mobile();
-  padding-top: 40px;
-  padding-bottom: 35px;
-
-  background-color: white;
-
+.section__text {
   font-family: "Roboto Regular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   text-align: justify;
   color: black;
-}
 
-.page-section__text {
   &--desktop {
     display: none;
 
@@ -97,43 +32,8 @@
   }
 }
 
-.page-section__description {
-  &--features {
-    margin-bottom: 40px;
-  }
+.section__img {
+  width: 100%;
+  height: auto;
 }
 
-.page-section__company-info {
-  position: relative;
-  text-align: left;
-  padding-top: 110px;
-}
-
-.page-section__company-info::before {
-  position: absolute;
-  content: '';
-  width: 60px;
-  height: 60px;
-
-  top: 35px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.page-section__company-info {
-  &--sale::before {
-    background-image: url(../../img/icon-sales.png);
-  }
-  &--eco::before {
-    background-image: url(../../img/icon-eco.png);
-  }
-  &--grow::before {
-    background-image: url(../../img/icon-grow.png);
-  }
-  &--phone::before {
-    background-image: url(../../img/icon-phone.png);
-  }
-}

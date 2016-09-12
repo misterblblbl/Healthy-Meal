@@ -15,12 +15,20 @@
     right: 10px;
     background-image: url(../../img/arrow-right.svg);
     background-position: 60% center;
+
+    @media @tablet-widths {
+      right: -60px;
+    }
   }
 
   &--left {
     left: 10px;
     background-image: url(../../img/arrow-left.svg);
     background-position: 40% center;
+
+    @media @tablet-widths {
+      left: -60px;
+    }
   }
 }
 
@@ -34,6 +42,11 @@
   margin-left: 70px;
   margin-right: 70px;
   background-color: @body-bg;
+
+  @media @tablet-widths {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .tastes-slider__items {
@@ -47,7 +60,7 @@
   float: left;
   border-radius: 40px;
   margin: 30px 30px 0 30px;
-  padding: 35px 15px 34px 15px;
+  padding: 35px 20px 34px 20px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 

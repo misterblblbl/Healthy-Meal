@@ -13,7 +13,7 @@
             <h1 class="visually-hidden">Здоровое питание</h1>
 
             <div class="page-header__logo">
-                <img src="img/hm-logo.svg" alt="Здоровое питание" width="200" height="70">
+                <img src="img/hm-logo.svg" alt="Здоровое питание">
             </div>
 
             <nav class="main-nav" id="menu">
@@ -39,47 +39,63 @@
                         </li>
                     </ul>
                 </div>
-
-                <div class="header-contacts">
-                    <p class="header-contacts__time">Понедельник — пятница</p>
-                    <p class="header-contacts__time">C 8:00 до 17:00</p>
-                    <a class="header-contacts__phone" href="tel:+74957833680">+7 (495) 783-36-80</a>
-                </div>
             </nav>
         </div>
     </header>
     <main>
-        <section class="page-section page-section--product" id="magic-straw">
-            <div class="page-section__wrapper">
-                <div class="page-section__picture page-section__picture--ms">
+        <section class="contacts">
+
+            <div class="contacts__wrapper">
+                <p class="contacts__time">Понедельник — пятница</p>
+                <p class="contacts__time">C 8:00 до 17:00</p>
+                <a class="contacts__phone" href="tel:+74957833680">+7 (495) 783-36-80</a>
+            </div>
+        </section>
+
+        <section class="product" id="magic-straw">
+            <div class="product__wrapper">
+                <div class="product__picture">
                     <picture>
-                        <!--<source media="(min-width: 1200px)"  srcset="img/photo-7-desktop@2x.jpg 2x,-->
-                      <!--img/photo-7-desktop.jpg">-->
-                        <img src="img/glass-mobile.png" alt="Стакан с молоком" width="304" height="403">
+                        <source media="(min-width: 1024px)"  srcset="img/glass-desktop.png">
+                        <source media="(min-width: 767px)"  srcset="img/glass-tablet.png">
+                        <img class="section__img" src="img/glass-mobile.png" alt="Стакан с молоком" width="304" height="403">
                     </picture>
+
+                    <!--<picture>-->
+                        <!--<source media="(min-width: 1100px)"-->
+                                <!--srcset="img/photo-6-desktop@2x.jpg 2x,-->
+                      <!--img/photo-6-desktop.jpg">-->
+                        <!--<source media="(min-width: 768px)"-->
+                                <!--srcset="img/photo-6-tablet@2x.jpg 2x,-->
+                      <!--img/photo-6-tablet.jpg">-->
+                        <!--<source media="(max-width: 767px)"-->
+                                <!--srcset="img/photo-6-mobile@2x.jpg 2x,-->
+                      <!--img/photo-6-mobile.jpg">-->
+                        <!--<img class="photos-item__image" src="img/photo-6-mobile.jpg" alt="фото пользователя">-->
+                    <!--</picture>-->
                 </div>
 
-                <div class="page-section__content">
-                    <h1 class="page-section__header">Волшебная соломинка</h1>
-                    <div class="page-section__description">
-                        <p class="page-section__text">
+                <div class="product__content">
+                    <h1 class="product__header section__header">Волшебная соломинка</h1>
+                    <div class="product__description">
+                        <p class="product__text section__text">
                             «Волшебная соломинка» - это трубочка, наполненная вкусными сахарными гранулами, она помогает
                             превратить  простое молоко в разнообразные вкусные напитки и сделать молоко любимым напитком детей!
                         </p>
 
-                        <p class="page-section__text">
+                        <p class="product__text section__text">
                             Использовать «Волшебную соломинку» очень просто. Надо опустить трубочку в стакан с молоком
                             и пить молоко через трубочку. Проходя через наполнитель, молоко растворяет гранулы
                             и становится вкусным молочным коктейлем, пить который детям гораздо приятнее
                             и интереснее чем обычное молоко.
                         </p>
-                        <p class="page-section__text page-section__text--desktop">
+                        <p class="product__text  section__text section__text--desktop">
                             Назначение «Волшебной соломинки» - сделать употребление молока интересным и приятным
                             для детей. Молоко - полезный и питательный продукт, необходимый для полноценного
                             развития ребёнка. Но одни дети любят молоко и охотно его пьют, а другим вкус этого
                             напитка не нравится.
                         </p>
-                        <p class="page-section__text page-section__text--desktop">
+                        <p class="product__text section__text section__text--desktop">
                             «Волшебная соломинка» превратит употребление молока в интересное развлечение,
                             с ней даже самые стойкие противники молока пьют его с удовольствием
                         </p>
@@ -88,9 +104,9 @@
             </div>
         </section>
 
-        <section class="page-section page-section--tastes">
-            <div class="page-section__wrapper page-section__wrapper--tastes">
-                <h1 class="page-section__header">Наши вкусы</h1>
+        <section class="tastes">
+            <div class="tastes__wrapper">
+                <h1 class="tastes__header section__header">Наши вкусы</h1>
 
                 <div class="tastes-slider__inner">
                     <div class="tastes-slider__controls tastes-slider__controls--left"></div>
@@ -172,71 +188,84 @@
             </div>
         </section>
 
-        <section class="page-section page-section--features">
-            <div class="page-section__wrapper">
+        <section class="features">
+            <div class="features__wrapper">
 
-                <div class="page-section__content">
-                    <h1 class="page-section__header page-section__header--features">В чём достоинства «Волшебной соломинки»?</h1>
-                    <div class="page-section__description page-section__description--features">
-                        <p class="page-section__text">
+                <div class="features__content">
+                    <h1 class="features__header section__header">В чём достоинства «Волшебной соломинки»?</h1>
+                    <div class="features__description">
+                        <p class="features__text section__text">
                             «Волшебная соломинка» - инновационный продукт, который производится
                             в Венгрии и уже хорошо зарекомендовал себя не только на европейском
                             рынке, но и во всём мире.
                         </p>
 
-                        <p class="page-section__text">
+                        <p class="features__text section__text">
                             Наши специалисты долгое время работали над составом, постоянно улучшая
                             его, поэтому теперь наша соломинка состоит только из натуральных
                             ингредиентов и полностью безопасна для детей любого возраста.
                         </p>
 
-                        <p class="page-section__text">
+                        <p class="features__text section__text">
                             Она удобнее и практичнее готовых молочных коктейлей, занимает мало
                             места и может храниться 2 года.
                         </p>
 
-                        <p class="page-section__text">
+                        <p class="features__text section__text">
                             И, самое главное!
                             «Волшебная соломинка» нравится детям и помогает легко и быстро
                             привить им любовь к полезному молоку!
                         </p>
                     </div>
 
-                    <div class="page-section__picture">
-                        <img src="img/block.png" alt="Блок с соломинкой">
+                    <div class="features__picture">
+                        <picture>
+                            <source media="(min-width: 1024px)"  srcset="img/block-desktop.png">
+                            <source media="(min-width: 767px)"  srcset="img/block-desktop.png">
+                            <img class="section__img" src="img/block.png" alt="Блок с соломинкой">
+                        </picture>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <section class="page-section page-section--actions" id="actions">
-            <div class="page-section__actions-introduction">
-                <h1 class="page-section__header">Наши акции</h1>
-                <p class="page-section__text">
-                    А ты записался в волшебники?
-                </p>
-
-                <p class="page-section__text">
-                    Каждый хочет быть волшебником или хотя бы уметь делать что-то чудесное.
-                    На свете есть множество книжек и фильмов про волшебников и волшебство,
-                    но в них ничего говорится о том, где можно научиться делать чудеса и как
-                    вообще они делаются.
-                </p>
-
-                <p class="page-section__text">
-                    Но теперь всё будет по-другому. Потому что у нас есть
-                    «Волшебная соломинка»! Любой человек любого возраста может с её помощью
-                    совершать удивительные чудеса с обычным молоком!
-                </p>
-
-                <p class="page-section__text">
-                    Кроме вкуса и пользы организму, у «Волшебной соломинки» есть ещё куча призов
-                    и сюрпризов. Если вы любите всякие игрушки и полезные штучки, вроде мячей и рюкзаков,
-                    вам надо сделать вот что:
-                </p>
-            </div>
+        <section class="actions" id="actions">
 
             <div class="actions__wrapper">
+                <div class="actions__introduction">
+                    <div class="actions__text">
+                        <h1 class="actions__header section__header">Наши акции</h1>
+                        <p class="section__text">
+                            А ты записался в волшебники?
+                        </p>
+
+                        <p class="section__text">
+                            Каждый хочет быть волшебником или хотя бы уметь делать что-то чудесное.
+                            На свете есть множество книжек и фильмов про волшебников и волшебство,
+                            но в них ничего говорится о том, где можно научиться делать чудеса и как
+                            вообще они делаются.
+                        </p>
+
+                        <p class="section__text">
+                            Но теперь всё будет по-другому. Потому что у нас есть
+                            «Волшебная соломинка»! Любой человек любого возраста может с её помощью
+                            совершать удивительные чудеса с обычным молоком!
+                        </p>
+
+                        <p class="section__text">
+                            Кроме вкуса и пользы организму, у «Волшебной соломинки» есть ещё куча призов
+                            и сюрпризов. Если вы любите всякие игрушки и полезные штучки, вроде мячей и рюкзаков,
+                            вам надо сделать вот что:
+                        </p>
+                    </div>
+
+                    <div class="actions__pic">
+                        <img class="section__img" src="img/fridge.png" alt="">
+                    </div>
+
+                </div>
+
             <div class="actions__steps">
                 <input class="actions__input" type="radio" id="actions-toggle-1" name="actions-toggle" checked>
                 <input class="actions__input" type="radio" id="actions-toggle-2" name="actions-toggle">
@@ -250,7 +279,7 @@
 
                 <div class="actions__inner">
                     <div class="actions__items">
-                        <div class="actions__item">
+                        <div class="actions__item" data-number="1">
                             <div class="actions__picture">
                                 <img src="img/cow.svg" alt="Корова">
                             </div>
@@ -262,7 +291,7 @@
                             </p>
                         </div>
 
-                        <div class="actions__item">
+                        <div class="actions__item" data-number="2">
                             <div class="actions__picture">
                                 <img src="img/computer.svg" alt="Компьютер">
                             </div>
@@ -276,7 +305,7 @@
                             </p>
                         </div>
 
-                        <div class="actions__item">
+                        <div class="actions__item" data-number="3">
                             <div class="actions__picture">
                                 <img src="img/presents.svg" alt="Подарки">
                             </div>
@@ -295,35 +324,35 @@
             </div>
         </section>
 
-        <section class="page-section page-section--water-straw" id="water-straw">
-            <div class="page-section__wrapper">
+        <section class="water-straw" id="water-straw">
+            <div class="water-straw__wrapper">
 
-                <div class="page-section__content">
-                    <h1 class="page-section__header page-section__header--water-straw">Соломинка для воды «Vita Sip»</h1>
+                <div class="water-straw__picture">
+                    <img class="section__img" src="img/vitasip.png" alt="Vita Sip" width="308" height="518">
+                </div>
 
-                    <div class="page-section__picture page-section__picture--water-straw">
-                        <img src="img/vitasip.png" alt="Vita Sip" width="308" height="518">
-                    </div>
+                <div class="water-straw__content">
+                    <h1 class="water-straw__header section__header">Соломинка для воды «Vita Sip»</h1>
 
-                    <div class="page-section__description">
-                        <p class="page-section__text">
+                    <div class="water-straw__description">
+                        <p class="section__text">
                             «Волшебная соломинка» - инновационный продукт, который производится
                             в Венгрии и уже хорошо зарекомендовал себя не только на европейском
                             рынке, но и во всём мире.
                         </p>
 
-                        <p class="page-section__text">
+                        <p class="section__text">
                             Наши специалисты долгое время работали над составом, постоянно улучшая
                             его, поэтому теперь наша соломинка состоит только из натуральных
                             ингредиентов и полностью безопасна для детей любого возраста.
                         </p>
 
-                        <p class="page-section__text">
+                        <p class="section__text">
                             Она удобнее и практичнее готовых молочных коктейлей, занимает мало
                             места и может храниться 2 года.
                         </p>
 
-                        <p class="page-section__text">
+                        <p class="section__text">
                             И, самое главное!
                             «Волшебная соломинка» нравится детям и помогает легко и быстро
                             привить им любовь к полезному молоку!
@@ -333,56 +362,61 @@
             </div>
         </section>
 
-        <section class="page-section page-section--company" id="company">
-            <div class="page-section__wrapper">
+        <section class="company" id="company">
+            <div class="company__wrapper">
 
-                <h1 class="page-section__header">О компании</h1>
+                <div class="company__content">
+                    <h1 class="company__header section__header">О компании</h1>
 
-                <div class="page-section__colunm page-section__colunm--left">
-                    <p class="page-section__company-info page-section__company-info--sale">
-                        Компания «Здоровое питание» работает на рынке уже более 5 лете. Все это время компания
-                        занимается поставкой соломинки для молока с разными вкусами. Сегодня наша продукция
-                        представлена более чем в 50 городах страны.
-                    </p>
+                    <div class="company__colunm company__colunm--left">
+                        <p class="company__info company__info--sale">
+                            Компания «Здоровое питание» работает на рынке уже более 5 лете. Все это время компания
+                            занимается поставкой соломинки для молока с разными вкусами. Сегодня наша продукция
+                            представлена более чем в 50 городах страны.
+                        </p>
 
-                    <p class="page-section__company-info page-section__company-info--eco">
-                        «Здоровое питание» уже более 7 лет развивает рынок потребления молока, благодаря
-                        своему революционному продукту. Многие магазины, при появлении в их ассортименте
-                        «Волшебной соломинки», фиксируют рост продажи молока более чем на 25%.
-                    </p>
+                        <p class="company__info company__info--eco">
+                            «Здоровое питание» уже более 7 лет развивает рынок потребления молока, благодаря
+                            своему революционному продукту. Многие магазины, при появлении в их ассортименте
+                            «Волшебной соломинки», фиксируют рост продажи молока более чем на 25%.
+                        </p>
+                    </div>
+
+                    <div class="company__colunm company__colunm--right">
+                        <p class="company__info company__info--grow">
+                            Миссия компании «Здоровое питание» - принести на российский рынок современные
+                            и качественные продукты. Мы считаем, что россияне должны питаться вкусной и здоровой пищей.
+                        </p>
+
+                        <p class="company__info company__info--phone">
+                            Качественное исполнение и натуральные ингредиенты подтверждены хорошими отзывами
+                            потребителей. Мы очень любим наш продукт и считаем, что он обязательно должен
+                            присутствовать на молочной витрине каждого продуктового магазина и в отделе
+                            кондитерских товаров для детей.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="page-section__colunm page-section__colunm--right">
-                    <p class="page-section__company-info page-section__company-info--grow">
-                        Миссия компании «Здоровое питание» - принести на российский рынок современные
-                        и качественные продукты. Мы считаем, что россияне должны питаться вкусной и здоровой пищей.
-                    </p>
-
-                    <p class="page-section__company-info page-section__company-info--phone">
-                        Качественное исполнение и натуральные ингредиенты подтверждены хорошими отзывами
-                        потребителей. Мы очень любим наш продукт и считаем, что он обязательно должен
-                        присутствовать на молочной витрине каждого продуктового магазина и в отделе
-                        кондитерских товаров для детей.
-                    </p>
-                </div>
             </div>
         </section>
     </main>
 
-    <footer class="page-footer">
-        <div class="page-footer__additional">
-            <a class="page-footer__links" href="">Дистрибьюторам</a>
-            <a  class="page-footer__links" href="">Нащи документы</a>
-            <a class="page-footer__links" href="#callme">Позвоните мне</a>
-        </div>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__additional">
+                <a class="footer__links" href="">Как нас найти?</a>
+                <a  class="footer__links" href="">Нащи документы</a>
+                <a class="footer__links" href="#callme">Позвоните мне</a>
+            </div>
 
-        <div class="page-footer__contacts">
-            <a class="page-footer__phone" href="tel:+74957833680">+7 (495) 783-36-80</a>
-            <a class="page-footer__email" href="mailto:info@healthymeal.ru">info@healthymeal.ru</a>
-        </div>
+            <div class="footer__contacts">
+                <a class="footer__phone" href="tel:+74957833680">+7 (495) 783-36-80</a>
+                <a class="footer__email" href="mailto:info@healthymeal.ru">info@healthymeal.ru</a>
+            </div>
 
-        <div class="page-footer__logo">
-            <img src="img/hm-logo.svg" alt="Здоровое питание" width="300" height=80">
+            <div class="footer__logo">
+                <img src="img/hm-logo.svg" alt="Здоровое питание" width="300" height=80">
+            </div>
         </div>
     </footer>
 

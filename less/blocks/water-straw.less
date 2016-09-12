@@ -1,0 +1,48 @@
+.water-straw {
+  width: auto;
+  margin-top: 40px;
+  z-index: 1;
+  background-color: #FFFFFF;
+
+  .padding-mobile();
+  padding-top: 40px;
+  padding-bottom: 35px;
+
+  @media @tablet-widths {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.water-straw__wrapper {
+  .container-fluid();
+  position: relative;
+}
+
+.water-straw__content {
+  @media @tablet-widths {
+    padding-left: 340px;
+  }
+
+  @media @desktop-widths {
+    padding-left: 440px;
+    min-height: 500px;
+  }
+}
+
+.water-straw__picture {
+  @media @tablet-widths {
+    position: absolute;
+    top: -130px;
+    left: 0;
+    padding: 0;
+    width: 300px;
+    height: 399px;
+    z-index: 2;
+  }
+
+  @media @desktop-widths {
+    width: 374px;
+    height: 561px;
+  }
+}
