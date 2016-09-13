@@ -319,7 +319,7 @@ body {
   top: -90px;
   width: 115%;
   margin-left: -20px;
-  z-index: 9;
+  z-index: 15;
   padding-top: 98px;
   background-color: #90ddff;
 }
@@ -349,12 +349,13 @@ body {
   height: 70px;
   background-image: url('../../img/hm-logo.svg');
   background-repeat: no-repeat;
+  z-index: 16;
 }
 .main-nav__toggle {
   position: absolute;
   top: -38px;
   right: 0;
-  z-index: 10;
+  z-index: 16;
   display: block;
   width: 50px;
   height: 25px;
@@ -373,6 +374,7 @@ body {
   height: 27px;
   background-image: url(../../img/icon-cross.svg);
   background-repeat: no-repeat;
+  z-index: 16;
 }
 .main-nav__items {
   list-style: none;
@@ -539,13 +541,12 @@ body {
   }
 }
 .product__picture {
+  position: relative;
   padding: 0 20px;
   text-align: center;
   font-size: 0;
   line-height: 0;
-  background-image: url(../../img/gradient.png);
-  background-position: top center;
-  background-repeat: no-repeat;
+  z-index: 10;
 }
 @media (min-width: 768px) {
   .product__picture {
@@ -553,8 +554,8 @@ body {
     bottom: 0;
     right: 0;
     padding: 0;
-    width: 300px;
-    height: 399px;
+    width: 350px;
+    height: 445px;
     z-index: 2;
     background-position: top center;
   }
@@ -563,11 +564,32 @@ body {
   .product__picture {
     width: 417px;
     height: 554px;
-    bottom: -23px;
+    bottom: -24px;
   }
 }
-.product__picture img {
-  max-width: 400px;
+.product__picture:before {
+  position: absolute;
+  content: '';
+  top: -6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/gradient.svg);
+  background-position: 50% center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+@media (min-width: 1024px) {
+  .product__picture:before {
+    top: -20%;
+  }
+}
+@media (max-width: 767px) {
+  .product__picture img {
+    max-width: 417px;
+  }
 }
 .product__content {
   padding-left: 20px;
@@ -917,7 +939,7 @@ body {
 @media (min-width: 768px) {
   .features__picture {
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     left: 0;
     padding: 0;
     width: 270px;
@@ -929,7 +951,28 @@ body {
   .features__picture {
     width: 270px;
     height: 416px;
-    bottom: 20px;
+    bottom: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .features__picture:before {
+    position: absolute;
+    content: '';
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/gradient.svg);
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+}
+@media (min-width: 1024px) {
+  .features__picture:before {
+    top: -30%;
   }
 }
 .actions {
@@ -972,21 +1015,45 @@ body {
     right: 20px;
     bottom: 0;
     width: 242px;
-    height: 276px;
+    height: 278px;
   }
 }
 @media (min-width: 1024px) {
   .actions__pic {
     width: 342px;
-    height: 390px;
+    height: 393px;
+  }
+}
+@media (min-width: 768px) {
+  .actions__pic:before {
+    position: absolute;
+    content: '';
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/gradient.svg);
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+}
+@media (min-width: 1024px) {
+  .actions__pic:before {
+    top: -25%;
   }
 }
 .actions__steps {
+  margin: 0 auto;
   margin-top: 50px;
+  width: 280px;
 }
 @media (min-width: 768px) {
   .actions__steps {
     margin-top: 0;
+    width: auto;
   }
 }
 .actions__wrapper {
@@ -1081,12 +1148,14 @@ body {
   width: 20px;
 }
 .actions__items {
-  width: 900px;
+  width: 300%;
   transition: transform .8s ease;
 }
 @media (min-width: 768px) {
   .actions__items {
     width: auto;
+    display: flex;
+    justify-content: space-between;
   }
 }
 .actions__item {
@@ -1095,9 +1164,8 @@ body {
   width: 280px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 40px;
-  min-height: 300px;
+  min-height: 320px;
   padding: 48px 20px 45px;
-  margin-right: 20px;
   text-align: left;
   font-size: 14px;
   line-height: 20px;
@@ -1107,6 +1175,9 @@ body {
     width: 32%;
     margin-right: 2%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
 .actions__item:last-child {
@@ -1134,10 +1205,10 @@ body {
   transform: translate(0);
 }
 #actions-toggle-2:checked ~ .actions__inner .actions__items {
-  transform: translate(-300px);
+  transform: translate(-280px);
 }
 #actions-toggle-3:checked ~ .actions__inner .actions__items {
-  transform: translate(-600px);
+  transform: translate(-560px);
 }
 .water-straw {
   width: auto;
@@ -1215,6 +1286,7 @@ body {
 @media (min-width: 768px) {
   .company {
     padding: 0;
+    margin-top: -2px;
     background: #FFFFFF;
     color: #FFFFFF;
     padding-bottom: 80px;
@@ -1263,15 +1335,6 @@ body {
     padding-top: 30px;
   }
 }
-.company__colunm {
-  width: 50%;
-}
-.company__colunm--left {
-  float: left;
-}
-.company__colunm--right {
-  float: right;
-}
 .company__info {
   position: relative;
   padding-top: 110px;
@@ -1283,6 +1346,10 @@ body {
 }
 @media (min-width: 768px) {
   .company__info {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 49%;
     padding-top: 0;
     padding-left: 60px;
     padding-right: 30px;
@@ -1309,16 +1376,16 @@ body {
   }
 }
 .company__info--sale::before {
-  background-image: url(../../img/icon-sales.png);
+  background-image: url(../../img/icon-telega.svg);
 }
 .company__info--eco::before {
-  background-image: url(../../img/icon-eco.png);
+  background-image: url(../../img/icon-eco.svg);
 }
 .company__info--grow::before {
-  background-image: url(../../img/icon-grow.png);
+  background-image: url(../../img/icon-grow.svg);
 }
 .company__info--phone::before {
-  background-image: url(../../img/icon-phone.png);
+  background-image: url(../../img/icon-quality.svg);
 }
 .footer {
   padding: 30px 0;
@@ -1407,6 +1474,8 @@ body {
 .footer__logo {
   display: block;
   text-align: center;
+  width: 280px;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .footer__logo {
@@ -1416,4 +1485,8 @@ body {
     text-align: right;
     padding: 0;
   }
+}
+.footer__logo img {
+  width: 100%;
+  height: auto;
 }

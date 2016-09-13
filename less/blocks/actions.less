@@ -38,19 +38,45 @@
     right: 20px;
     bottom: 0;
     width: 242px;
-    height: 276px;
+    height: 278px;
   }
 
   @media @desktop-widths {
     width: 342px;
-    height: 390px;
+    height: 393px;
+  }
+}
+
+.actions__pic:before {
+  @media @tablet-widths {
+    position: absolute;
+    content: '';
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/gradient.svg);
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    z-index: -1;
+  }
+
+  @media @desktop-widths {
+    top: -25%;
   }
 }
 
 .actions__steps {
+  margin: 0 auto;
   margin-top: 50px;
+  width: 280px;
+
   @media @tablet-widths {
     margin-top: 0;
+    width: auto;
   }
 }
 
@@ -134,11 +160,13 @@
 }
 
 .actions__items {
-  width: 900px;
+  width: 300%;
   transition: transform .8s ease;
 
   @media @tablet-widths {
     width: auto;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -148,9 +176,8 @@
   width: 280px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 40px;
-  min-height: 300px;
+  min-height: 320px;
   padding: 48px 20px 45px;
-  margin-right: 20px;
 
   text-align: left;
   font-size: 14px;
@@ -160,6 +187,10 @@
     width: 32%;
     margin-right: 2%;
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
 
@@ -192,9 +223,9 @@
 }
 
 #actions-toggle-2:checked ~ .actions__inner .actions__items {
-  transform: translate(-300px);
+  transform: translate(-280px);
 }
 
 #actions-toggle-3:checked ~ .actions__inner .actions__items {
-  transform: translate(-600px);
+  transform: translate(-560px);
 }

@@ -56,23 +56,20 @@
             <div class="product__wrapper">
                 <div class="product__picture">
                     <picture>
-                        <source media="(min-width: 1024px)"  srcset="img/glass-desktop.png">
-                        <source media="(min-width: 767px)"  srcset="img/glass-tablet.png">
-                        <img class="section__img" src="img/glass-mobile.png" alt="Стакан с молоком" width="304" height="403">
-                    </picture>
+                        <source media="(min-width: 1024px)" srcset="img/glass-desktop@2x.webp 2x" type="image/webp">
+                        <source media="(min-width: 1024px)" srcset="img/glass-desktop@2x.png 2x,
+                        img/glass-desktop.png">
 
-                    <!--<picture>-->
-                        <!--<source media="(min-width: 1100px)"-->
-                                <!--srcset="img/photo-6-desktop@2x.jpg 2x,-->
-                      <!--img/photo-6-desktop.jpg">-->
-                        <!--<source media="(min-width: 768px)"-->
-                                <!--srcset="img/photo-6-tablet@2x.jpg 2x,-->
-                      <!--img/photo-6-tablet.jpg">-->
-                        <!--<source media="(max-width: 767px)"-->
-                                <!--srcset="img/photo-6-mobile@2x.jpg 2x,-->
-                      <!--img/photo-6-mobile.jpg">-->
-                        <!--<img class="photos-item__image" src="img/photo-6-mobile.jpg" alt="фото пользователя">-->
-                    <!--</picture>-->
+                        <source media="(min-width: 768px)" srcset="img/glass-tablet@2x.webp 2x" type="image/webp">
+                        <source media="(min-width: 768px)" srcset="img/glass-tablet@2x.png 2x,
+                        img/glass-tablet.png">
+
+                        <source media="(max-width: 767px)" srcset="img/glass-desktop@2x.webp 2x" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="img/glass-desktop@2x.png 2x,
+                        img/glass-desktop.png">
+
+                        <img class="section__img" src="img/glass-desktop.png" alt="Стакан с молоком">
+                    </picture>
                 </div>
 
                 <div class="product__content">
@@ -220,8 +217,10 @@
 
                     <div class="features__picture">
                         <picture>
-                            <source media="(min-width: 1024px)"  srcset="img/block-desktop.png">
-                            <source media="(min-width: 767px)"  srcset="img/block-desktop.png">
+                            <source  srcset="img/block@2x.webp 2x,
+                            img/block.webp" type="image/webp">
+                            <source  srcset="img/block@2x.png 2x,
+                        img/block.png">
                             <img class="section__img" src="img/block.png" alt="Блок с соломинкой">
                         </picture>
                     </div>
@@ -261,7 +260,17 @@
                     </div>
 
                     <div class="actions__pic">
-                        <img class="section__img" src="img/fridge.png" alt="">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/fridge-tablet@2x.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="img/fridge-tablet@2x.png 2x,
+                        img/glass-tablet.png">
+
+                            <source media="(max-width: 767px)" srcset="img/fridge-desktop@2x.webp 2x" type="image/webp">
+                            <source media="(max-width: 767px)" srcset="img/fridge-desktop@2x.png 2x,
+                        img/fridge-desktop.png">
+
+                            <img class="section__img" src="img/fridge-desktop.png" alt="Акции">
+                        </picture>
                     </div>
 
                 </div>

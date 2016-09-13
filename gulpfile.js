@@ -6,6 +6,7 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync");
+var webp = require("gulp-webp");
 
 gulp.task("style", function() {
     gulp.src("less/style.less")
@@ -34,4 +35,13 @@ gulp.task("serve", ["style"], function() {
 
     gulp.watch("less/**/*.less", ["style"]);
     gulp.watch("*.html").on("change", server.reload);
+});
+
+gulp.task("webp", function () {
+    return gulp.src("img/*.png")
+        .pipe(webp({
+            quality: 94,
+            method: 6
+        }))
+        .pipe(gulp.dest("img"));
 });
