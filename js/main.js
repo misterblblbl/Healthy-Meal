@@ -27,6 +27,17 @@ $(document).ready(function(){
         //анимируем переход на расстояние - top за 1500 мс
         $('body,html').animate({scrollTop: top}, 1000);
     });
+
+    $('.tastes-slider__items').slick({
+        infinite: true,
+        speed: 300,
+        swipeToSlide: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        prevArrow: $('.tastes-slider__controls--left'),
+        nextArrow: $('.tastes-slider__controls--right')
+    });
 });
 
 
