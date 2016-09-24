@@ -11,16 +11,11 @@
   "devDependencies": {
     "autoprefixer": "6.3.3",
     "browser-sync": "2.11.1",
-    "css-mqpacker": "^5.0.1",
     "editorconfig-tools": "0.1.1",
     "gulp": "3.9.1",
-    "gulp-clean": "^0.3.2",
-    "gulp-csso": "^2.0.0",
     "gulp-less": "3.1.0",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-run-sequence": "^0.3.2",
     "gulp-webp": "^2.3.0"
   },
   "license": "MIT",

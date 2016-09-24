@@ -51,11 +51,11 @@
 .main-nav__wrapper--opened::before {
   content: '';
   position: absolute;
-  top: 25px;
+  top: 20px;
   left: 20px;
   width: 200px;
   height: 70px;
-  background-image: url('../../img/hm-logo.svg');
+  background-image: url('../img/hm-logo.svg');
   background-repeat: no-repeat;
   z-index: 16;
 
@@ -63,17 +63,20 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: -38px;
+  top: -60px;
   right: 0;
   z-index: 16;
 
   display: block;
-  width: 50px;
-  height: 25px;
+  width: 60px;
+  height: 60px;
 
   font-size: 0;
   cursor: pointer;
-  background: url(../../img/icon-burger.svg) no-repeat;
+  background-image: url('../img/icon-burger.svg');
+  background-repeat: no-repeat;
+  background-size: 50px 25px;
+  background-position: center;
 
   @media @tablet-widths {
   display: none;
@@ -81,11 +84,14 @@
 }
 
 .main-nav__toggle--opened {
-  right: 20px;
-  width: 27px;
-  height: 27px;
-  background-image: url(../../img/icon-cross.svg);
+  right: 0;
+  top: -60px;
+  width: 60px;
+  height: 60px;
+  background-image: url('../img/icon-cross.svg');
   background-repeat: no-repeat;
+  background-size: 27px 27px;
+  background-position: center;
 
   z-index: 17;
 }

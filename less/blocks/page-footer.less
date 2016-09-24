@@ -1,5 +1,6 @@
 .footer {
   padding: 30px 0;
+  background-color: @dark-blue;
 
   @media @tablet-widths {
     font-size: 0;
@@ -9,6 +10,12 @@
 
 .footer__wrapper {
   .container-fluid();
+
+  @media @tablet-widths {
+    display: flex;
+    justify-content: space-between;
+  }
+
 }
 
 .footer__additional {
@@ -18,19 +25,52 @@
   @media @tablet-widths {
     display: inline-block;
     vertical-align: middle;
-    width: 27%;
-    margin-right: 2%;
+    margin: 0;
+    margin-top: 35px;
     text-align: left;
     padding: 0;
   }
 }
 
 .footer__links {
-  display: block;
+  display: inline-block;
+  position: relative;
+  padding-left: 70px;
   font-size: 18px;
   line-height: 40px;
   color: #FFFFFF;
   text-decoration: none;
+  cursor: pointer;
+
+  @media @tablet-widths {
+    font-size: 16px;
+    line-height: 40px;
+    padding-left: 60px;
+  }
+
+  @media @desktop-widths {
+    padding-left: 63px;
+  }
+}
+
+.footer__links::before {
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+
+  top: -8px;
+  left: 0;
+
+  background-image: url(../img/vacancy.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media @tablet-widths {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .footer__contacts {
@@ -42,9 +82,8 @@
 
   @media @tablet-widths {
     display: inline-block;
-    vertical-align: middle;
-    width: 35%;
-    margin-right: 2%;
+    vertical-align: bottom;
+    //width: 34%;
     text-align: center;
     padding: 0;
   }
@@ -60,6 +99,11 @@
   text-decoration: none;
 
   @media @tablet-widths {
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+  @media @desktop-widths {
     font-size: 24px;
     line-height: 36px;
   }
@@ -73,10 +117,17 @@
 
   @media @tablet-widths {
     display: inline-block;
+    width: 220px;
     vertical-align: middle;
-    width: 34%;
+    //margin-right: 4%;
+    //width: 30%;
     text-align: right;
     padding: 0;
+    margin: 0;
+
+    @media @desktop-widths {
+      width: auto;
+    }
   }
 }
 

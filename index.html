@@ -409,14 +409,98 @@
 
             </div>
         </section>
+
+        <section class="modal visually-hidden" id="vacancy">
+
+            <div class="modal__close">
+                <img src="img/icon-cross-red.svg" alt="Закрыть" width="30" height="30">
+            </div>
+
+            <h1 class="modal__header section__header">
+                Региональный менеджер <br>
+                по развитию продаж
+            </h1>
+
+            <div class="modal__terms">
+                <div class="modal__terms-item">
+                    <div class="modal__terms-title">Город</div>
+                    <div class="modal__terms-body">Москва, метро Нагатинская</div>
+                </div>
+
+                <div class="modal__terms-item">
+                    <div class="modal__terms-title">Зарплата</div>
+                    <div class="modal__terms-body">от 50 000 до 150 000 руб.</div>
+                </div>
+
+                <div class="modal__terms-item">
+                    <div class="modal__terms-title">Требуемый опыт работы</div>
+                    <div class="modal__terms-body">1–3 года</div>
+                </div>
+            </div>
+
+            <div class="modal__description" id="vacancy">
+                <div class="modal__description-block">
+                    <h3 class="modal__description-head modal__description-head--column">Обязанности:</h3>
+
+                    <div class="modal__description-body modal__description-body--left">
+                        <p class="modal__description-text">Увеличение продаж на закрепленной территории:</p>
+                        <ul class="modal__description-list">
+                            <li class="modal__description-item">поиск новых клиентов;</li>
+                            <li class="modal__description-item">развитие действующей клиентской базы;</li>
+                            <li class="modal__description-item">расширение территории продаж, каналов сбыта, полноты ассортимента;</li>
+                            <li class="modal__description-item">планирование, контроль и исполнение планов продаж.</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal__description-body modal__description-body--right">
+                        <p class="modal__description-text">Качественная работа с покупателями:</p>
+                        <ul class="modal__description-list">
+                            <li class="modal__description-item">проведение переговоров;</li>
+                            <li class="modal__description-item">заключение договоров;</li>
+                            <li class="modal__description-item">организация поставок (прием заказов, обеспечение своевременной
+                                отгрузки, контроль за получением товара клиентам), контроль за документооборотом;</li>
+                            <li class="modal__description-item">работа с дебиторской задолженностью - контроль за своевременной оплатой; ведение отчетности
+                                по клиенту, анализ его продаж за период; поддержание постоянного контакта с клиентом.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal__description-block">
+                    <h3 class="modal__description-head">Требования:</h3>
+                    <ul class="modal__description-list">
+                        <li class="modal__description-item">опыт работы от 1 года;</li>
+                        <li class="modal__description-item">готовность к командировкам;</li>
+                        <li class="modal__description-item">активная жизненная позиция и нацеленность на результат;</li>
+                        <li class="modal__description-item">базовые знания ПК;</li>
+                    </ul>
+                </div>
+
+                <div class="modal__description-block">
+                    <h3 class="modal__description-head">Условия:</h3>
+                    <ul class="modal__description-list">
+                        <li class="modal__description-item">оклад, премия до 7% от объема продаж: заработная плата от 50 до 150 тысяч рублей;</li>
+                        <li class="modal__description-item">испытательный срок 3 месяца, оформление по ТК РФ;</li>
+                        <li class="modal__description-item">полная занятость, график работы с 8:00 до 17:00;</li>
+                        <li class="modal__description-item">оплачиваемые ежегодный отпуск, больничные, корпоративные мероприятия;</li>
+                        <li class="modal__description-item">офис находится по адресу: г. Москва, м. Нагатинская, Нагорный проезд (Здание НИИ Векшинского, напротив "РЕСО-Гарантии")</li>
+                    </ul>
+                </div>
+
+                <div class="modal__description-block modal__description-block--email">
+                    <div>Отправляйте ваши резюме по адресу:
+                        <a class="modal__email" href="mailto: sergey.koleso@healthymeal.ru"> sergey.koleso@healthymeal.ru</a>
+                       </div>
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
     <footer class="footer">
         <div class="footer__wrapper">
-            <div class="footer__additional">
-                <a class="footer__links" href="">Как нас найти?</a>
-                <a  class="footer__links" href="">Нащи документы</a>
-                <a class="footer__links" href="#callme">Позвоните мне</a>
+            <div class="footer__logo">
+                <img src="img/hm-logo.svg" alt="Здоровое питание" width="300" height=80">
             </div>
 
             <div class="footer__contacts">
@@ -424,42 +508,15 @@
                 <a class="footer__email" href="mailto:info@healthymeal.ru">info@healthymeal.ru</a>
             </div>
 
-            <div class="footer__logo">
-                <img src="img/hm-logo.svg" alt="Здоровое питание" width="300" height=80">
+            <div class="footer__additional">
+                <a class="footer__links" href="#vacancy">Наши вакансии</a>
             </div>
+
         </div>
     </footer>
 
-    <section class="modal visually-hidden">
-        <button class="modal__icon-close"></button>
-
-        <form class="feedback-form" action="/echo" method="post">
-
-            <div class="modal__clearfix">
-                <div class="modal__name">
-                    <label class="modal__label modal__label--name" for="name-field">Имя</label>
-                    <input class="modal__input-field modal__input-field--name" type="text" name="name" placeholder="Введите ваше имя" id="name-field">
-                </div>
-
-                <div class="modal__email">
-                    <label class="modal__label modal__label--phone" for="phone-field">Номер телефона для связи</label>
-                    <input class="modal__input-field modal__input-field--phone" type="tel" name="phone" id="phone-field" placeholder="Номер телефона для связи">
-                </div>
-            </div>
-
-            <label for="input-message">Комментарии</label>
-            <textarea class="modal__description" name="message" id="input-message" placeholder="Комментарии">
-            </textarea>
-
-            <div class="modal__clearfix">
-                <button class="modal__btn modal__btn--send" type="submit">Отправить</button>
-                <button class="modal__btn modal__btn--undo" type="submit">Отмена</button>
-            </div>
-        </form>
-    </section>
-
-    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/libs/slick.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

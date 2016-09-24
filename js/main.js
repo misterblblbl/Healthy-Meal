@@ -1,22 +1,30 @@
+/*
+ * Third party
+ */
+//= libs/jquery-3.1.0.min.js
+//= libs/slick.min.js
 
-var menuToggle = document.querySelector('.main-nav__toggle');
-var menuWrapper = document.querySelector('.main-nav__wrapper');
 
-menuToggle.addEventListener('click', function(){
-    menuWrapper.classList.toggle('main-nav__wrapper--closed');
-    if (menuToggle.classList.contains('main-nav__toggle--closed')) {
-        menuToggle.classList.remove('main-nav__toggle--closed');
-        menuToggle.classList.add('main-nav__toggle--opened');
-        menuWrapper.classList.add('main-nav__wrapper--opened');
-    } else if (menuToggle.classList.contains('main-nav__toggle--opened')) {
-        menuToggle.classList.remove('main-nav__toggle--opened');
-        menuToggle.classList.add('main-nav__toggle--closed');
-        menuWrapper.classList.remove('main-nav__wrapper--opened');
-        menuWrapper.classList.add('main-nav__wrapper--closed');
-    }
-});
 
 $(document).ready(function(){
+    var menuToggle = $('.main-nav__toggle');
+    var menuWrapper = $('.main-nav__wrapper');
+
+
+    menuToggle.on('click', function(){
+        menuWrapper.toggleClass('main-nav__wrapper--closed');
+        if (menuToggle.hasClass('main-nav__toggle--closed')) {
+            menuToggle.removeClass('main-nav__toggle--closed');
+            menuToggle.addClass('main-nav__toggle--opened');
+            menuWrapper.addClass('main-nav__wrapper--opened');
+        } else if (menuToggle.hasClass('main-nav__toggle--opened')) {
+            menuToggle.removeClass('main-nav__toggle--opened');
+            menuToggle.addClass('main-nav__toggle--closed');
+            menuWrapper.removeClass('main-nav__wrapper--opened');
+            menuWrapper.addClass('main-nav__wrapper--closed');
+        }
+    });
+
     $("#menu").on("click","a", function (event) {
         //отменяем стандартную обработку нажатия по ссылке
         event.preventDefault();
@@ -26,6 +34,29 @@ $(document).ready(function(){
             top = $(id).offset().top;
         //анимируем переход на расстояние - top за 1500 мс
         $('body,html').animate({scrollTop: top}, 1000);
+    });
+
+    var popupLink = $('.footer__links');
+    var popup = $('.modal');
+    var popupCloseButton = $('.modal__close');
+
+    popupLink.on('click', function (event) {
+        event.preventDefault();
+        popup.removeClass('visually-hidden');
+
+        var top = $(popup).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+
+    popupCloseButton.on('click', function(event) {
+        event.preventDefault();
+        popup.addClass('visually-hidden');
+    });
+
+    $(document).keydown(function(event) {
+        if (event.keyCode == 27) {
+            popup.addClass('visually-hidden');
+     }
     });
 
     $('.tastes-slider__items').slick({
