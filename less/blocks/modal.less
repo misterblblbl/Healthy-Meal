@@ -31,11 +31,16 @@
 .modal__terms {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 
   background-color: #addcf2;
   padding: 20px;
   padding-top: 10px;
   border-radius: 10px;
+
+  @media @tablet-widths {
+    flex-direction: row;
+  }
 }
 
 .modal__terms-title {
@@ -73,21 +78,37 @@
 }
 
 .modal__description-body--left {
-  flex-basis: 38%;
-  margin-right: 2%;
+  flex-basis: 100%;
+
+  @media @tablet-widths {
+    flex-basis: 38%;
+    margin-right: 2%;
+  }
 }
 
 .modal__description-body--right {
-  flex-basis: 60%;
+  flex-basis: 100%;
+
+  @media @tablet-widths {
+    flex-basis: 60%;
+  }
 }
 
 .modal__description-block:nth-child(2) {
-  flex-basis: 38%;
-  margin-right: 2%;
+  flex-basis: 100%;
+
+  @media @tablet-widths {
+    flex-basis: 38%;
+    margin-right: 2%;
+  }
 }
 
 .modal__description-block:nth-child(3) {
-  flex-basis: 60%;
+  flex-basis: 100%;
+
+  @media @tablet-widths {
+    flex-basis: 60%;
+  }
 }
 
 .modal__description-block--email {
